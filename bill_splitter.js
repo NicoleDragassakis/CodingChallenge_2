@@ -11,8 +11,16 @@ console.log("Total Amount:", bill+tip); // output Total amount: 100.05
 
 //Task 3 Create a Function
 
-const calculateTip = function(b){ 
-   return (b<=300) ? 0.15*b : 0.20*b; // Calculates tip amount based off b
+const calculateTip = function(b) { 
+   return (b <= 300) ? 0.15 * b : 0.20 * b; // Calculates tip amount based off b
 };
 let b = 100.00; //test bill ammount
 console.log(calculateTip(b())); //output 15.00
+
+//Task 4 Utilize Arrays
+
+let bills = [275, 40, 430, 125, 555, 44]; //define dataset 1 and 2
+let tips = bills.map(calculateTip); // calculate the tip based off the bill from the array
+let totals = bills.map((bills, index) => bills+tips[index]); // Sums tips and bills for total amount.
+
+//
